@@ -1,7 +1,7 @@
 import {productosDao as productosApi} from "../daos/index.js";
 
 
-const productosController = {
+export const productosController = {
 
     listarAll: async (req, res) => {
         const productos = await productosApi.listarAll()
@@ -21,5 +21,4 @@ const productosController = {
     }
 }
 
-module.exports = {productosController}
 

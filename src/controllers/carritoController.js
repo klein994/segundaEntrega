@@ -1,7 +1,7 @@
 import {carritosDao as carritosApi} from "../daos/index.js";
 
 
-const carritoController = {
+export const carritoController = {
 
     listarAll: async (req, res) => {
         res.json((await carritosApi.listarAll()).map(c => c.id))
@@ -34,6 +34,6 @@ const carritoController = {
     }
 }
 
-module.exports = {carritoController}
+
 
 

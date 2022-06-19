@@ -1,11 +1,11 @@
-const express = require('express')
-const { Server: HttpServer } = require('http')
-const { productosRouter } = require('./routers/productosRouter.js')
-const { carritosRouter } = require('./routers/carritosRouter.js')
+import express from 'express'
+import { Server } from 'http'
+import { productosRouter } from './routers/productosRouter.js'
+import { carritosRouter }  from './routers/carritosRouter.js'
 
 const app = express()
-const bodyParser = require("body-parser");
-const httpServer = new HttpServer(app)
+import bodyParser from "body-parser";
+const httpServer = new Server(app)
 
 
 app.use(bodyParser.urlencoded({ extended: true }));

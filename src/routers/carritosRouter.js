@@ -1,8 +1,8 @@
-const express = require('express')
-const { carritoController } = require('../controllers/carritoController.js')
+import express from 'express'
+import { carritoController } from '../controllers/carritoController.js'
 
 
-const carritosRouter = express.Router()
+export const carritosRouter = express.Router()
 
 
 carritosRouter.get('/api/carritos', carritoController.listarAll)
@@ -12,5 +12,5 @@ carritosRouter.get('/api/carritos/:id/productos', carritoController.listar)
 carritosRouter.put('/api/carritos/:id/productos', carritoController.actualizar)
 carritosRouter.delete('/api/carritos/:id/productos/:idProd', carritoController.borrarOne)
 
-module.exports = { carritosRouter }
+
 
